@@ -66,7 +66,7 @@ class PinpointTransport extends Transport
                         'Addresses' => $addresses,
                         'MessageConfiguration' => [
                             'EmailMessage' => [
-                                'FromAddress' => \Safe\sprintf('%s <%s>', config('mail.from.name'), config('mail.from.address')),
+                                'FromAddress' =>  "${config('mail.from.name')} ${config('mail.from.address')}",
                                 'RawEmail' => [
                                     'Data' => $message->toString()
                                 ]
